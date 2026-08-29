@@ -1,0 +1,44 @@
+{
+  "manifest_version": 3,
+  "name": "Lumina — Time-aware browsing",
+  "version": "1.0.0",
+  "description": "Đặt giới hạn thời gian dùng cho từng trang web mỗi ngày. Khi hết giờ, trang sẽ được chặn nhẹ nhàng.",
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "options_ui": {
+    "page": "options/options.html",
+    "open_in_tab": true
+  },
+  "permissions": [
+    "storage",
+    "alarms",
+    "tabs",
+    "idle",
+    "webNavigation"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["blocked/blocked.html", "blocked/blocked.css", "blocked/blocked.js"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}

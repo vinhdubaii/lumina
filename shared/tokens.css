@@ -1,0 +1,21 @@
+:root {
+  --ink: #14141f;
+  --card: #1b1b2a;
+  --card-hover: #262638;
+  --ash: #34344a;
+  --gold: #ffb84d;
+  --ember: #ff6b5b;
+  --text: #f2f0ea;
+  --text-muted: #8b8aa0;
+
+  /* "Times New Roman" first: unlike some Georgia builds, it carries full
+     precomposed Vietnamese glyphs (ố, ệ, ữ, ...) so accents render as a
+     single glyph instead of being redrawn from a fallback font mid-word. */
+  --serif: "Times New Roman", Georgia, "Noto Serif", serif;
+  --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --mono: "SF Mono", "Cascadia Code", "Consolas", "Roboto Mono", monospace;
+}
+
+* {
+  box-sizing: border-box;
+}

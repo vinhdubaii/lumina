@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8" />
+<title>Hết ánh sáng cho hôm nay — Lumina</title>
+<link rel="stylesheet" href="blocked.css" />
+</head>
+<body>
+  <main class="scene">
+    <svg class="dial" viewBox="0 0 200 200" width="140" height="140" aria-hidden="true">
+      <circle class="dial-track" cx="100" cy="100" r="86" />
+      <circle class="wick" cx="100" cy="100" r="10" />
+    </svg>
+
+    <h1 id="site-name" class="site-name"></h1>
+    <p class="message">Khẩu phần ánh sáng cho hôm nay đã dùng hết.</p>
+    <p class="submessage" id="quote"></p>
+
+    <div class="reset-row">
+      <span>Sáng lại sau</span>
+      <span id="countdown" class="countdown">--:--:--</span>
+    </div>
+  </main>
+
+  <script src="blocked.js"></script>
+</body>
+</html>

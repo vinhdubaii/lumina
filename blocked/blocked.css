@@ -1,0 +1,87 @@
+:root {
+  --ink: #101019;
+  --ash: #2a2a3c;
+  --text: #f2f0ea;
+  --text-muted: #74738a;
+  --gold: #ffb84d;
+  --serif: "Times New Roman", Georgia, "Noto Serif", serif;
+  --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --mono: "SF Mono", "Cascadia Code", "Consolas", "Roboto Mono", monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: radial-gradient(ellipse at 50% 30%, #17172a 0%, var(--ink) 65%);
+  color: var(--text);
+  font-family: var(--sans);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.scene {
+  text-align: center;
+  max-width: 420px;
+  padding: 40px;
+}
+
+.dial {
+  margin-bottom: 20px;
+}
+
+.dial-track {
+  fill: none;
+  stroke: var(--ash);
+  stroke-width: 6;
+}
+
+.wick {
+  fill: var(--ash);
+}
+
+.site-name {
+  font-family: var(--serif);
+  font-size: 26px;
+  font-weight: 400;
+  margin: 0 0 10px;
+  color: var(--text);
+}
+
+.message {
+  font-size: 15px;
+  color: var(--text);
+  margin: 0 0 6px;
+}
+
+.submessage {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin: 0 0 28px;
+  font-style: italic;
+  min-height: 18px;
+}
+
+.reset-row {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 18px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 999px;
+  font-size: 12.5px;
+  color: var(--text-muted);
+}
+
+.countdown {
+  font-family: var(--mono);
+  color: var(--gold);
+  letter-spacing: 0.03em;
+}

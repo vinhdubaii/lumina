@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8" />
+<title>Quản lý — Lumina</title>
+<link rel="stylesheet" href="../shared/tokens.css" />
+<link rel="stylesheet" href="../shared/nav.css" />
+<link rel="stylesheet" href="options.css" />
+</head>
+<body>
+  <nav class="pill-nav">
+    <div class="pill-nav-inner">
+      <a href="options.html" class="is-active">
+        <span class="pill-nav-dot" aria-hidden="true"></span>
+        Quản lý
+      </a>
+      <a href="../dashboard/dashboard.html">Thống kê</a>
+    </div>
+  </nav>
+
+  <header class="page-header">
+    <h1>Quản lý giới hạn</h1>
+    <p class="subtitle">Chỉnh số phút mỗi ngày cho từng trang, hoặc thêm trang mới.</p>
+  </header>
+
+  <main class="content">
+    <ul id="site-list" class="site-list"></ul>
+
+    <p id="empty-state" class="empty-state" hidden>
+      Chưa có trang nào được giới hạn. Thêm một trang bên dưới để bắt đầu.
+    </p>
+
+    <form id="add-form" class="add-form">
+      <div class="field">
+        <label for="domain-input">Trang web</label>
+        <input
+          id="domain-input"
+          type="text"
+          placeholder="youtube.com"
+          autocomplete="off"
+          required
+        />
+      </div>
+      <div class="field field-minutes">
+        <label for="minutes-input">Phút / ngày</label>
+        <input
+          id="minutes-input"
+          type="number"
+          min="1"
+          max="1440"
+          value="30"
+          required
+        />
+      </div>
+      <button type="submit" class="btn-add" aria-label="Thêm trang">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+          <path d="M8 2V14M2 8H14" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+        </svg>
+        Thêm
+      </button>
+    </form>
+  </main>
+
+  <template id="site-row-template">
+    <li class="site-row">
+      <svg class="dial" viewBox="0 0 44 44" width="40" height="40">
+        <circle class="dial-track" cx="22" cy="22" r="18" />
+        <circle class="dial-progress" cx="22" cy="22" r="18" />
+      </svg>
+      <div class="site-info">
+        <div class="site-name"></div>
+        <div class="site-time"></div>
+      </div>
+      <div class="site-edit">
+        <input type="number" min="1" max="1440" class="limit-input" />
+        <span class="unit">phút</span>
+      </div>
+      <div class="site-actions">
+        <button class="icon-btn delete-btn" aria-label="Xoá" title="Xoá">
+          <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
+            <path d="M3 4.5H13M6 4.5V3C6 2.5 6.4 2 7 2H9C9.6 2 10 2.5 10 3V4.5M11.5 4.5L11 13C11 13.5 10.5 14 10 14H6C5.5 14 5 13.5 5 13L4.5 4.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </div>
+    </li>
+  </template>
+
+  <script src="options.js"></script>
+</body>
+</html>

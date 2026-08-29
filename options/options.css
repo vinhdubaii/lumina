@@ -1,0 +1,220 @@
+body {
+  margin: 0;
+  background: var(--ink);
+  color: var(--text);
+  font-family: var(--sans);
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+.page-header {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 28px 24px 18px;
+}
+
+.page-header h1 {
+  font-family: var(--serif);
+  font-size: 30px;
+  font-weight: 400;
+  margin: 0 0 6px;
+}
+
+.subtitle {
+  color: var(--text-muted);
+  font-size: 14px;
+  margin: 0;
+}
+
+.content {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 10px 24px 60px;
+}
+
+.site-list {
+  list-style: none;
+  margin: 0 0 6px;
+  padding: 0;
+  background: var(--card);
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.site-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 16px;
+}
+
+.site-row + .site-row {
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.dial {
+  flex-shrink: 0;
+  transform: rotate(-90deg);
+}
+
+.dial-track {
+  fill: none;
+  stroke: var(--ash);
+  stroke-width: 4;
+}
+
+.dial-progress {
+  fill: none;
+  stroke: var(--gold);
+  stroke-width: 4;
+  stroke-linecap: round;
+  transition: stroke-dashoffset 0.4s ease, stroke 0.4s ease;
+}
+
+.site-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.site-name {
+  font-size: 14px;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.site-time {
+  font-family: var(--mono);
+  font-size: 11.5px;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+
+.site-edit {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+.limit-input {
+  width: 56px;
+  background: var(--ink);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  padding: 7px 8px;
+  color: var(--text);
+  font-family: var(--mono);
+  font-size: 13px;
+  text-align: center;
+  outline: none;
+}
+
+.limit-input:focus {
+  border-color: var(--gold);
+}
+
+.site-edit .unit {
+  font-size: 11.5px;
+  color: var(--text-muted);
+}
+
+.site-actions {
+  flex-shrink: 0;
+}
+
+.icon-btn {
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  padding: 7px;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+}
+
+.icon-btn:hover {
+  color: var(--ember);
+  background: var(--card-hover);
+}
+
+.empty-state {
+  text-align: center;
+  font-size: 13px;
+  color: var(--text-muted);
+  line-height: 1.6;
+  padding: 32px 10px;
+  background: var(--card);
+  border-radius: 14px;
+}
+
+.add-form {
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+  margin-top: 16px;
+  padding: 16px;
+  background: var(--card);
+  border-radius: 14px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  flex: 1;
+  min-width: 0;
+}
+
+.field-minutes {
+  flex: 0 0 100px;
+}
+
+.field label {
+  font-size: 10.5px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--text-muted);
+}
+
+.field input {
+  background: var(--ink);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  padding: 9px 10px;
+  color: var(--text);
+  font-family: var(--sans);
+  font-size: 13.5px;
+  outline: none;
+  width: 100%;
+}
+
+.field input:focus {
+  border-color: var(--gold);
+}
+
+.field-minutes input {
+  font-family: var(--mono);
+}
+
+.btn-add {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  height: 38px;
+  padding: 0 16px;
+  border-radius: 8px;
+  border: none;
+  background: var(--gold);
+  color: var(--ink);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.btn-add:hover {
+  background: #ffc670;
+}

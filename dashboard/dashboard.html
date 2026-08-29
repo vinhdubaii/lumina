@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8" />
+<title>Thống kê — Lumina</title>
+<link rel="stylesheet" href="../shared/tokens.css" />
+<link rel="stylesheet" href="../shared/nav.css" />
+<link rel="stylesheet" href="dashboard.css" />
+</head>
+<body>
+  <nav class="pill-nav">
+    <div class="pill-nav-inner">
+      <a href="../options/options.html">
+        <span class="pill-nav-dot" aria-hidden="true"></span>
+        Quản lý
+      </a>
+      <a href="dashboard.html" class="is-active">Thống kê</a>
+    </div>
+  </nav>
+
+  <header class="page-header">
+    <h1>Thống kê 7 ngày qua</h1>
+    <p class="subtitle">Thời gian bạn dùng cho từng trang, so với khẩu phần mỗi ngày.</p>
+  </header>
+
+  <main id="content" class="content"></main>
+
+  <p id="empty-state" class="empty-state" hidden>
+    Chưa có trang nào được theo dõi. Vào trang Quản lý để thêm trang đầu tiên.
+  </p>
+
+  <template id="site-chart-template">
+    <section class="site-chart">
+      <div class="site-chart-header">
+        <h2 class="site-chart-name"></h2>
+        <span class="site-chart-limit"></span>
+      </div>
+      <div class="bars"></div>
+    </section>
+  </template>
+
+  <script src="dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,113 @@
+body {
+  margin: 0;
+  background: var(--ink);
+  color: var(--text);
+  font-family: var(--sans);
+  min-height: 100vh;
+}
+
+.page-header {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 20px 24px 18px;
+}
+
+.page-header h1 {
+  font-family: var(--serif);
+  font-size: 30px;
+  font-weight: 400;
+  margin: 0 0 6px;
+}
+
+.subtitle {
+  color: var(--text-muted);
+  font-size: 14px;
+  margin: 0;
+}
+
+.content {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 10px 24px 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.site-chart {
+  background: var(--card);
+  border-radius: 14px;
+  padding: 20px 22px;
+}
+
+.site-chart-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.site-chart-name {
+  font-size: 15px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.site-chart-limit {
+  font-family: var(--mono);
+  font-size: 11.5px;
+  color: var(--text-muted);
+}
+
+.bars {
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+  height: 96px;
+}
+
+.bar-col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  height: 100%;
+  justify-content: flex-end;
+}
+
+.bar-track {
+  width: 100%;
+  max-width: 26px;
+  height: 72px;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.05);
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+}
+
+.bar-fill {
+  width: 100%;
+  border-radius: 5px 5px 0 0;
+  transition: height 0.4s ease;
+}
+
+.bar-label {
+  font-size: 10.5px;
+  color: var(--text-muted);
+}
+
+.bar-col.is-today .bar-label {
+  color: var(--text);
+  font-weight: 600;
+}
+
+.empty-state {
+  max-width: 640px;
+  margin: 40px auto;
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 14px;
+  padding: 0 24px;
+}
